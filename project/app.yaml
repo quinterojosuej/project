@@ -5,10 +5,11 @@ threadsafe: true
 handlers:
 - url: /.*
   script: main.app
+- url: /results
+  script: main.app
   
 libraries:
 - name: webapp2
   version: latest
 - name: jinja2
   version: latest
-  

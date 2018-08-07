@@ -3,7 +3,8 @@ from random import shuffle
 import jinja2
 import os
 #import requests
-import urllib.request
+import urllib
+import json 
 endpoint = 'https://maps.googleapis.com/maps/api/directions/json?'
 api_key = 'AIzaSyCXlRkL8rvN8cEiIV_t69tNAZdtKlbU6vY'
 #r = request.get(https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyCXlRkL8rvN8cEiIV_t69tNAZdtKlbU6vY, data = {'key':'value')
@@ -21,30 +22,37 @@ the_jinja_env = jinja2.Environment(
     
 class project(webapp2.RequestHandler):
     def get(self):
-        about_template = the_jinja_env.get_template('css/project.html')
-        
-        self.response.write(about_template.render())
-        
-        
-        college_select = {
-        "UC Berkely": "", 
-        "UC Davis": "",
-        "UC Santa Cruz": "",
-        "UC Irvine": "PG",
-        "UC San Diego": "",
-        "UC Riverside": "",
-        "UCLA": "",
-        "UC Merced": "",
-        "UC Santa Barbara":"" 
-        }
+        results_template = the_jinja_env.get_template('/project.html')
+        #origin = input('What school are you in?')
+        #nav_request = 'origin=() & key=()'.format(origin,api_key)
+        #request = endpoint + nav_request
+        #response= urllib.request.urlopen(request).read()
+        #directions = json.loads(response)
+        self.response.write(results_template.render())
+    def post(self):
+        origin = self.request.get('origin')
+        self.response.write(origin)
+        nav_request = 'origin=() & key=()'.format(origin,api_key)
+        request = endpoint + nav_request
+        response = urllib.request.urlopen(request).read()
+        directions = json.loads(response)
 
+        
+        
+        
+college_select = {
+"UC Berkely": "", 
+"UC Davis": "",
+"UC Santa Cruz": "",
+"UC Irvine": "",
+"UC San Diego": "",
+"UC Riverside": "",
+"UCLA": "",
+"UC Merced": "",
+"UC Santa Barbara":"" 
+}
 
-class resulsts(webapp2.RequestHandler):
-    def get(self): 
-        about_template = the_jinja_env.get_template('css/results.html')
-        self.response.write(about_template.render())
-
-    
+        
 app = webapp2.WSGIApplication([
-    ('/', project),('/resulsts', resulsts),
+    ('/', project),
 ], debug=True)
