@@ -1,0 +1,48 @@
+body {  
+    background: url(http://beachboxphysiotherapy.com.au/wp-content/uploads/2012/12/top-header-bg-blue.jpg);
+    background-size: 100% 145px;
+    background-repeat: no-repeat;
+    background-color: white;
+    margin: 0px;
+   
+}
+            
+ul {
+                    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#3A8AAD;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #808080;
+}
+
+.active {
+    background-color:#439EBB;
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:#439EBB;
+   color: white;
+   text-align: center;
+}
+
