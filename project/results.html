@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script>
-      console.log({myDict});
-    </script>
     <title>Place Searches</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
@@ -23,6 +20,9 @@
     <script>
     console.log("GOT DATA")
     
+    </script>
+    <script>
+    
       // This example requires the Places library. Include the libraries=places
       // parameter when you first load the API. For example:
       // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
@@ -30,8 +30,10 @@
       var map;
       var infowindow;
       
+      var pyrmont1 = {lat: 36.650945, lng : -121.790773};
+      
       function initMap() {
-        var pyrmont = {lat: 36.650945, lng: -121.790773};
+        var pyrmont = pyrmont1;
 
         map = new google.maps.Map(document.getElementById('map'), {
           center: pyrmont,

@@ -51,6 +51,7 @@ class project(webapp2.RequestHandler):
      def post(self):
         origin = self.request.get('school')
         #  self.response.write(origin)
+        print origin
         myDict = {
             'key': origin
         }
@@ -59,19 +60,14 @@ class project(webapp2.RequestHandler):
         # self.response.get(results_template.render(myDict))
         # self.response.write(results_template.render(myDict))
         #  search = origin
-
         #  url = "https://maps.googleapis.com/maps/api/geocode/json"
-
         #  params = {
         #      'address': search
         #  }
-
         #  headers = {
         #     'key': 'AIzaSyCXlRkL8rvN8cEiIV_t69tNAZdtKlbU6vY'
         #  }
-
         #  r = requests.get(url, headers=headers, params=params)
-
         #  print r.json()
 
 class results(webapp2.RequestHandler):
