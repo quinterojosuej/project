@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script>
-      console.log({myDict});
-    </script>
     <title>Place Searches</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
@@ -21,17 +18,15 @@
       }
     </style>
     <script>
-    console.log("GOT DATA")
-    
       // This example requires the Places library. Include the libraries=places
       // parameter when you first load the API. For example:
       // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
       var map;
       var infowindow;
-      
+
       function initMap() {
-        var pyrmont = {lat: 36.650945, lng: -121.790773};
+        var pyrmont = {lat: -33.867, lng: 151.195};
 
         map = new google.maps.Map(document.getElementById('map'), {
           center: pyrmont,
@@ -42,8 +37,8 @@
         var service = new google.maps.places.PlacesService(map);
         service.nearbySearch({
           location: pyrmont,
-          radius: 16000,
-          type: ['park']
+          radius: 500,
+          type: ['store']
         }, callback);
       }
 
@@ -71,6 +66,6 @@
   </head>
   <body>
     <div id="map"></div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXlRkL8rvN8cEiIV_t69tNAZdtKlbU6vY&libraries=places&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap" async defer></script>
   </body>
 </html>
