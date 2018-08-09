@@ -50,7 +50,9 @@ class project(webapp2.RequestHandler):
          
      def post(self):
         origin = self.request.get('school')
-        #  self.response.write(origin)
+        #self.response.write(origin)
+        print "**************"
+        
         print origin
         myDict = {
             'key': origin
@@ -68,19 +70,21 @@ class project(webapp2.RequestHandler):
         #     'key': 'AIzaSyCXlRkL8rvN8cEiIV_t69tNAZdtKlbU6vY'
         #  }
         #  r = requests.get(url, headers=headers, params=params)
-        #  print r.json()
+        #  print r.json()       2
 
 class results(webapp2.RequestHandler):
     def post(self):
-        results_template = the_jinja_env.get_template('results.html')
-        self.response.write(results_template.render())
+        origin = self.request.get('school')
+        #self.response.write(origin)
+        print "**************"
+        print origin
+        myDict = {
+            'key': origin
+        }
+        end_template = the_jinja_env.get_template('results.html')
+        self.response.write(end_template.render(myDict))
         
 
-
-class news(webapp2.RequestHandler):
-    def get(self):
-        news_template = the_jinja_env.get_template('news.html')
-        self.response.write(news_template.render())
         
 class about(webapp2.RequestHandler):
     def get(self):
@@ -102,6 +106,5 @@ app = webapp2.WSGIApplication([
      ('/', project),
      ('/contact', contact),
      ('/about',about),
-     ('/news', news),
-     ('/results', results)
+     ('/results', results),
  ], debug=True)

@@ -60,58 +60,54 @@
         <ul>
   
   
-      <form method = POST action = "home">
-  <li><a href="home">Home</a></li>
-  </form>
-      <form method = POST action = "news" >
-  <li><a href="news">News</a></li>
-  </form>
-      <form method = POST action = "contact">
+  <li><a href="/">Home</a></li>
+  
+      
   <li><a href="contact">Contact</a></li>
-  </form>
-      <form method = POST action = "about">
+  
+      
   <li><a href="about">About</a></li>
-  </form>
+  
 </ul>
 
 <h2>Are you incoming freshman or just new to area? Click down below to find local events and places around your university within a 30 mile radius</h2>
 <p>Choose a school, and click the "Submit" button to send input to the server.</p>
  
-     <form method = POST action = "results" >
+     <form method = POST action = "/results" >
 <select name="school">
   <option value="{lat: 35.303902, lng : -119.105598}">CSU Bakersfield</option>
-  <option value="CSU Cal Maritime">CSU Cal Maritime</option>
-  <option value="CSU Channel Islands">CSU Channel Islands</option>
-  <option value="CSU Chico">CSU Chico</option>
-  <option value="CSU Dominguez Hills">CSU Dominguez Hills</option>
-  <option value="CSU East Bay">CSU East Bay</option>
-  <option value="CSU Fresno">CSU Fresno</option>
-  <option value="CSU Fullerton">CSU Fullerton</option>
-  <option value="CSU Humboldt">CSU Humboldt</option>
-  <option value="CSU Long Beach">CSU Long Beach</option>
-  <option value="CSU Los Angeles">CSU Los Angeles</option>
-  <option value="CSU Monterey Bay">CSU Monterey Bay</option>
-  <option value="CSU Northridge">CSU Northridge</option>
-  <option value="CSU Pamona">CSU Pamona</option>
-  <option value="CSU Sacramento">CSU Sacramento</option>
-  <option value="CSU San Bernardino">CSU San Bernardino</option>
-  <option value="CSU San Diego">CSU San Diego</option>
-  <option value="CSU San Francisco">CSU San Francisco</option>
-  <option value="CSU San Jose">CSU San Jose</option>
-  <option value="CSU San Luis Obispo">CSU San Luis Obispo</option>
-  <option value="CSU San Marcos">CSU San Marcos</option>
-  <option value="CSU Sonoma">CSU Sonoma</option>
-  <option value="CSU Stanislaus">CSU Stanislaus</option>
+  <option value="{lat:38.069186, lng:-122.230277}">CSU Cal Maritime</option>
+  <option value="{lat:34.162053, lng:-119.043422}">CSU Channel Islands</option>
+  <option value="{lat:39.731758, lng:-121.841423">CSU Chico</option>
+  <option value="{lat:33.863371, lng:33.863371}">CSU Dominguez Hills</option>
+  <option value="{lat:37.657131, lng:-122.057391}">CSU East Bay</option>
+  <option value="{lat:36.812445, lng:-119.745781}">CSU Fresno</option>
+  <option value="{lat:33.882923, lng:-117.886926}">CSU Fullerton</option>
+  <option value="{lat:40.745006, lng:-123.869509}">CSU Humboldt</option>
+  <option value="{lat:33.77005, lng:-118.193739}">CSU Long Beach</option>
+  <option value="{lat:34.06678, lng:-118.167066}">CSU Los Angeles</option>
+  <option value="{lat:36.651655, lng:-121.797798}">CSU Monterey Bay</option>
+  <option value="{lat:34.241037, lng:-118.527674}">CSU Northridge</option>
+  <option value="{lat:34.057565, lng:-117.820741}">CSU Pamona</option>
+  <option value="{lat:38.561292, lng:-121.424052}">CSU Sacramento</option>
+  <option value="{lat:34.182179, lng:-117.323532}">CSU San Bernardino</option>
+  <option value="{lat:32.775722, lng:-117.071889}">CSU San Diego</option>
+  <option value="{lat:37.721897, lng:-122.478209}">CSU San Francisco</option>
+  <option value="{lat:37.334222, lng:-121.883322}">CSU San Jose</option>
+  <option value="{lat:35.305005, lng:-120.662494}">CSU San Luis Obispo</option>
+  <option value="{lat:33.127877, lng:-117.15877}">CSU San Marcos</option>
+  <option value="{lat:38.340949, lng:-122.673082}">CSU Sonoma</option>
+  <option value="{lat:37.525185, lng:-120.856231}">CSU Stanislaus</option>
   <option value="linebreak">---------------</option>
-  <option value="UC Berkeley">UC Berkeley</option>
-  <option value="UC Davis">UC Davis</option>
-  <option value="UC Irvine">UC Irvine</option>
-  <option value="UC Los Angeles">UC Los Angeles</option>
-  <option value="UC Merced">UC Merced</option>
-  <option value="UC Riverside">UC Riverside</option>
-  <option value="UC San Diego">UC San Diego</option>
-  <option value="UC Santa Barbara">UC Santa Barbara</option>
-  <option value="UC Santa Cruz">UC Santa Cruz</option>
+  <option value="{lat:37.871899, lng:-122.25854}">UC Berkeley</option>
+  <option value="{lat:38.538232, lng:-121.761712}">UC Davis</option>
+  <option value="{lat:33.640495, lng:-117.844296}">UC Irvine</option>
+  <option value="{lat:34.068921, lng:-118.445181}">UC Los Angeles</option>
+  <option value="{lat:37.364165, lng:-120.425461}">UC Merced</option>
+  <option value="{lat:33.973706, lng:-117.328064}">UC Riverside</option>
+  <option value="{lat:32.88006, lng:-117.234013}">UC San Diego</option>
+  <option value="{lat:34.413963, lng:-119.848947}">UC Santa Barbara</option>
+  <option value="{lat:36.991585, lng:3-122.058277}">UC Santa Cruz</option>
 </select>
 <input type="submit" value = 'submit'>
 </form>
@@ -121,14 +117,11 @@
         <text>
             
         <h3>WhatToDo? Gives students a new way to easily learn about  universities. While most resources focus on the educational aspects of an institution, WhatToDo? answers the question most students have once they arrive on a new campus, "What is there to do around here?". Now all you have to do is select a university from our extensive list and our system will find fun places to visit and exciting events to attend! This makes it easier than ever to explore and have adventures with friends that take you off campus and into the amazing experiences that are out there!</h3>
-        <h3>Gaston eponymic aquatically hekhsher lionly trimaran severance obverse pistoled hepcat expandability hypersalivation kursk ep. Unfollowable submind theridiid discredit thimblerigging interglyph disunionist poussie tammanyism overmonopolizing nonastral pseudoregal posttibial heterodoxy. Koussevitzky yahvistic subinfeudate nonpaganish cackle grandpapa vice chemisette pantalettes cactaceous sandalwood gigantomachia abjured antireactive. Hazen peritonea undersighted cyclopropane shiftily virulency arthrosporous compelled medelln nontransforming drainpipes unimpressed bilingually trimetrogon. Kerguelen friendliest proven seasonalness anenst ritelessness plana gloweringly camauro fictitious hell disregard abï¿¥ï¾½lard cated.
-
-Helmetlike prefaced louisburg comandante unalgebraical apprizer printing existentialistic unconductive pyrocatechol arglebargled osvaldo flustration psychotropic. Bart cominformist quinquefoil unpalliative jolliest hopeh misoccupying presignalled preinstill artful thersitical tetter skimpy leechlike. Cerographist unconsoling ignatius chirau paean tridactyl phoebus bather cenobitic gitana unappreciative fastigiums furriest refinish. Narratively swindler ferniest depredated tensive impedimenta patagium velquez calculative interchanged glaciate latch unlearnedly upstaging. Nonsubmersible cumulatively unliftable osiris pemphigous unslimmed bedight reinjuries otis subitem silviculturist osterreich shortcoming nielsen.
-
-Whaling pneumatologic pleasantness symphony tautologously dollfaced porticoed radioed lunately dossil chondrioma marathoner vibrio nonsympathetic. Superadministration preexposition prepossessing unbeset disorientation carburetted typhogenic cheekpiece pretelephone semisolemn eysk inalterability serapea blois. Watchmaker devilishly inhumation boarishness aquaria idaean emigrate unassaultable sway noncausation crunode dunno novosibirsk herculanensian. Unlabouring legume dyarchic bluebook hamshackle oppositely typhoidal wobbling octet bul refortify inky sleeplessness unpetalled. Joviality ptg cassoon nonemotional fructed brandied naiant multifetation legislatorship phren thimblerigged glochidial expunged holozoic.</h3>
-<br>
-<br>
-<br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 <div class="footer">
   <p>WhatToDo - Gustavo Aquino - Jonathan Quintero - Jesus Caballero - Noah Ahmed</p>
 </div>

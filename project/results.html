@@ -18,8 +18,8 @@
       }
     </style>
     <script>
-    console.log("GOT DATA")
-    
+    console.log("GOT DATA");
+    console.log({{key}})
     </script>
     <script>
     
@@ -30,8 +30,9 @@
       var map;
       var infowindow;
       
-      var pyrmont1 = {lat: 36.650945, lng : -121.790773};
-      
+      var pyrmont1 = {{key}};
+      console.log("***********")
+      console.log(pyrmont1)
       function initMap() {
         var pyrmont = pyrmont1;
 
@@ -45,7 +46,7 @@
         service.nearbySearch({
           location: pyrmont,
           radius: 16000,
-          type: ['park']
+          type: (['sport'],['park'])
         }, callback);
       }
 
@@ -72,6 +73,9 @@
     </script>
   </head>
   <body>
+    <div>
+     key: {{key}}
+    </div>
     <div id="map"></div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXlRkL8rvN8cEiIV_t69tNAZdtKlbU6vY&libraries=places&callback=initMap" async defer></script>
   </body>
